@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ABOT US</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="LegalBrightBMICSS.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.myDiv {
+  padding: 50px;
+  background-color: #e3e6e6;    
+  text-align: center;
+}
+.header {
+  padding: 30px;
+  background: #102277;
+  color: white;
+  font-size: 30px;
+}
+.sidenav{
+	background-color: #161717;
+}
+.footer {
+   position:relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   min-height: 25; 
+   background-color: #102277;
+   color: white;
+   text-align: center;
+}	
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 4px;
+  text-align: center;
+  background-color: #88BFE1;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+	
+<body>
+<!-- Sidebar -->
+<div class="header">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="LegalBrightHome.html">Home</a>
+  <a href="#">Health Infos</a>
+  <a href="AboutUsLegalBright.html">About Us</a>
+</div> 
+	<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+	<h1 style="color: white; font-family:Times new roman;"><b><center>Healthify.Lifesum</center></b></h1>
+</div>
+	
+	<script>
+	function openNav() 
+		{
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";	
+		}
+
+	function closeNav() 
+		{
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+
+<div class="about-section">
+  <h1 style="font-family: Times New Roman"><b>About Us Page</b></h1>
+</div>
+<br>
+
+<div class="myDiv">
+<div>
+  <h1 style="font-family: Georgia"><b>LegalBright.Co</b></h1>
+  <p>Is a company for ITT588....</p>
+</div>
+	
+<h2 style="text-align:center"><b>Our Team</b></h2><br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Auni" style="width:100%">
+      <div class="container">
+        <h2>Auni</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Auni@example.com</p>
+      </div>
+    </div>
+  </div>
+	
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Farisa" style="width:100%">
+      <div class="container">
+        <h2>Farisa</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Farisa@example.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Farhana" style="width:100%">
+      <div class="container">
+        <h2>Farhana</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Farhana@example.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="#" alt="Hanis" style="width:100%">
+      <div class="container">
+        <h2>Hanis</h2>
+        <p class="title">Designer</p>
+        <p>Tengku Hanis Nabihah Binti Tengku Mokhtar.</p>
+        <p>2021113217@student.uitm.edu.my</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- footer-->
+	<div class="footer">
+	<p>Copyright© LegalBright. All Rights Reserved</p>
+	</div>
+</body>
+</html>

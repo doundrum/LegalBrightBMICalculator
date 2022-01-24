@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Legal Bright BMI Checker </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="LegalBrightBMICSS.css">
+
+<style>
+.myDiv {
+  border: 3px outset black;
+  padding: 40px;
+  background-color: #e3e6e6;    
+  text-align: center;
+}
+.decoration-one {
+    background-color:rgba(75,155,176,1.00);
+    margin: 0;
+    border-color: #157567;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.header {
+  padding: 30px;
+  background: #102277;
+  color: white;
+  font-size: 30px;
+}
+.sidenav{
+	background-color: #161717;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #102277;
+   color: white;
+   text-align: center;
+}	
+
+</style>
+</head>
+
+<body>
+<!-- Sidebar -->
+<div class="header">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="LegalBrightHome.html">Home</a>
+  <a href="AboutUsLegalBright.html">About Us</a>
+</div> 
+	<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+	<h1 style="color: white; font-family:Times new roman;"><b><center>Healthify.Lifesum</center></b></h1>
+</div>
+	
+	<script>
+	function openNav() 
+		{
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";	
+		}
+
+	function closeNav() 
+		{
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+	
+	<!--content -->
+	<div class="myDiv">
+	<h3><b>BMI Calculator</b></h3>
+		<h4><b>Calculate Your Body Mass Index (BMI) Here</b></h4><br>
+	<form id="myForm">
+	  Your Weight:<br><input type="text" id="weight" placeholder="KG"><br><br>
+	  Your Height:<br><input type="text" id="height" placeholder="CM"><br><br>
+		<input type="button" class="decoration-one px-3 py-2" onclick="myFunction()" value="Reset form">
+	  <input type="button" class="decoration-one px-3 py-2" onClick="calculateBMI()" Value="Calculate"><br><br>
+		<p>Your BMI: 
+			<span id = "result"></span></p>
+		<p>Your BMI Category: 
+			<span id = "bmiCategory"></span></p>
+		<p>Your Health Risk: 
+			<span id = "healthRisk"></span></p>
+		</form>
+	</div>
+	
+	<script>
+	function myFunction() 
+	{
+		document.getElementById("myForm").reset();
+		document.getElementById("result").remove();
+		document.getElementById("bmiCategory").remove();
+		document.getElementById("healthRisk").remove();
+	}
+		
+	function calculateBMI()
+		{
+			height = document.getElementById("height").value;
+			weight = document.getElementById("weight").value;
+			if(weight > 0 && height > 0)
+			{
+				heightmetre=height/100;
+				valbmi=weight/(heightmetre * heightmetre); bmiConvert=valbmi.toFixed(2);       document.getElementById("result").innerHTML =bmiConvert;
+				
+				if(bmiConvert <= 18.4)
+				{
+					document.getElementById("bmiCategory").innerHTML="Underweight";			 document.getElementById("healthRisk").innerHTML="Malnutirtion risk";
+				}
+				if(bmiConvert >= 18.5 && bmiConvert <=24.9)
+				{
+					document.getElementById("bmiCategory").innerHTML="Normal weight";			 document.getElementById("healthRisk").innerHTML="Low risk";
+				}
+	
+				if(bmiConvert >= 25 && bmiConvert <=29.9)
+					{
+						 document.getElementById("bmiCategory").innerHTML="Overweight";
+						 document.getElementById("healthRisk").innerHTML="Enhanced risk";
+					}
+
+				if(bmiConvert >= 30 && bmiConvert <=34.9)
+					{
+						 document.getElementById("bmiCategory").innerHTML="Moderately obese";
+						 document.getElementById("healthRisk").innerHTML="Medium risk";
+					}
+
+				if(bmiConvert >=35 && bmiConvert <=39.9)
+					{
+						 document.getElementById("bmiCategory").innerHTML="Severely obese";
+						 document.getElementById("healthRisk").innerHTML="High risk";
+					}
+
+				if(bmiConvert >=40) 
+					{
+						 document.getElementById("bmiCategory").innerHTML="Very severely obese";
+						 document.getElementById("healthRisk").innerHTML="Very high risk";
+					}
+			}
+				else{alert("Data you've entered might be incorrect. Please check and try again.")}
+		}
+	</script>
+		
+	<!-- footer-->
+	<div class="footer">
+	<p>Copyright© LegalBright. All Rights Reserved</p>
+	</div>
+</body>
+</html>
