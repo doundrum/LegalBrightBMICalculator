@@ -77,7 +77,7 @@
 	<form id="myForm">
 	  Your Weight:<br><input type="text" id="weight" placeholder="KG"><br><br>
 	  Your Height:<br><input type="text" id="height" placeholder="CM"><br><br>
-		<input type="button" class="decoration-one px-3 py-2" onclick="myFunction()" value="Reset form">
+		<input type="reset" class="decoration-one px-3 py-2" value="Reset form">
 	  <input type="button" class="decoration-one px-3 py-2" onClick="calculateBMI()" Value="Calculate"><br><br>
 		<p>Your BMI: 
 			<span id = "result"></span></p>
@@ -104,15 +104,18 @@
 			if(weight > 0 && height > 0)
 			{
 				heightmetre=height/100;
-				valbmi=weight/(heightmetre * heightmetre); bmiConvert=valbmi.toFixed(2);       document.getElementById("result").innerHTML =bmiConvert;
+				valbmi=weight/(heightmetre * heightmetre); bmiConvert=valbmi.toFixed(2);       
+				document.getElementById("result").innerHTML =bmiConvert;
 				
 				if(bmiConvert <= 18.4)
 				{
-					document.getElementById("bmiCategory").innerHTML="Underweight";			 document.getElementById("healthRisk").innerHTML="Malnutirtion risk";
+					document.getElementById("bmiCategory").innerHTML="Underweight";			 
+					document.getElementById("healthRisk").innerHTML="Malnutirtion risk";
 				}
 				if(bmiConvert >= 18.5 && bmiConvert <=24.9)
 				{
-					document.getElementById("bmiCategory").innerHTML="Normal weight";			 document.getElementById("healthRisk").innerHTML="Low risk";
+					document.getElementById("bmiCategory").innerHTML="Normal weight";			 
+					document.getElementById("healthRisk").innerHTML="Low risk";
 				}
 	
 				if(bmiConvert >= 25 && bmiConvert <=29.9)
