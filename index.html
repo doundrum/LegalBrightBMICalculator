@@ -5,12 +5,12 @@
 <title>Legal Bright BMI Checker </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="LegalBrightBMICSS.css">
 
 <style>
 .myDiv {
-  border: 3px outset black;
-  padding: 40px;
+  padding: 70px;
   background-color: #e3e6e6;    
   text-align: center;
 }
@@ -23,13 +23,28 @@
     font-weight: bold;
 }
 .header {
-  padding: 30px;
+  padding: 3px;
   background: #102277;
   color: white;
   font-size: 30px;
 }
-.sidenav{
-	background-color: #161717;
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: #000;
+}
+.active {
+  background-color: #4079B5;
 }
 .footer {
    position: fixed;
@@ -39,46 +54,29 @@
    background-color: #102277;
    color: white;
    text-align: center;
-}	
-
+}
 </style>
 </head>
 
 <body>
-<!-- Sidebar -->
+<div class="navbar">
+  <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="AboutUsLegalBright.html"><i class="fa fa-fw fa-user"></i> About Us</a>
+</div>
+
 <div class="header">
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="AboutUsLegalBright.html">About Us</a>
-</div> 
-	<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
 	<h1 style="color: white; font-family:Times new roman;"><b><center>Healthify.Lifesum</center></b></h1>
 </div>
-	
-	<script>
-	function openNav() 
-		{
-			document.getElementById("mySidenav").style.width = "250px";
-			document.getElementById("main").style.marginLeft = "250px";	
-		}
-
-	function closeNav() 
-		{
-			document.getElementById("mySidenav").style.width = "0";
-			document.getElementById("main").style.marginLeft= "0";
-		}
-	</script>
 	
 	<!--content -->
 	<div class="myDiv">
 	<h3><b>BMI Calculator</b></h3>
 		<h4><b>Calculate Your Body Mass Index (BMI) Here</b></h4><br>
 	<form id="myForm">
-	  Your Weight:<br><input type="text" id="weight" placeholder="KG"><br><br>
-	  Your Height:<br><input type="text" id="height" placeholder="CM"><br><br>
-		<input type="reset" class="decoration-one px-3 py-2" value="Reset form">
-	  <input type="button" class="decoration-one px-3 py-2" onClick="calculateBMI()" Value="Calculate"><br><br>
+		Your Weight:<br><input type="text" id="weight" placeholder="KG"><br><br>
+		Your Height:<br><input type="text" id="height" placeholder="CM"><br><br>
+		<input type="button" class="decoration-one px-3 py-2" onClick="calculateBMI()" Value="Calculate">
+		<input type="reset" class="decoration-one px-3 py-2" value="Reset"><br><br>
 		<p>Your BMI: 
 			<span id = "result"></span></p>
 		<p>Your BMI Category: 
@@ -110,7 +108,7 @@
 				if(bmiConvert <= 18.4)
 				{
 					document.getElementById("bmiCategory").innerHTML="Underweight";			 
-					document.getElementById("healthRisk").innerHTML="Malnutrition risk";
+					document.getElementById("healthRisk").innerHTML="Malnutirtion risk";
 				}
 				if(bmiConvert >= 18.5 && bmiConvert <=24.9)
 				{
@@ -146,9 +144,9 @@
 		}
 	</script>
 		
-	<!-- footer-->
+<!-- footer-->
 	<div class="footer">
-	<p>Copyright© LegalBright. All Rights Reserved</p>
+	<p>CopyrightÂ© LegalBright. All Rights Reserved</p>
 	</div>
 </body>
 </html>
