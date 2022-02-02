@@ -1,78 +1,56 @@
 @charset "utf-8";
 /* CSS Document */
 /* top header*/
-		.header {
-  padding: 60px;
-  background: #182978;
+
+	/*body*/
+.myDiv {
+  padding: 70px;
+   background-image: url('bluewallpaper.jpg');   
+  text-align: center;
+}
+	/*HOME*/
+.decoration-one {
+    background-color:rgba(75,155,176,1.00);
+    margin: 0;
+    border-color: #157567;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+	/*header*/
+.header {
+  padding: 3px;
+  background: #102277;
   color: white;
-  font-size: 80px;
-	
-}	
-	/*bottom footer*/
+  font-size: 30px;
+}
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: #000;
+}
+.active {
+  background-color: #4079B5;
+}
+	/*footer*/
 .footer {
    position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: #182978;
+   background-color: #102277;
    color: white;
    text-align: center;
-}
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-		/*content */
-
-.center
-{ text-align: center;
-  border: dotted;	
-}
-.box {
-  background-color: lightgrey;
-  width: 100px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
 }
 .inform{
   font-size:50px;
@@ -81,9 +59,36 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-
 @keyframes moreinformation {
   from {color: black;}
   to {color: red;}
-}
+}		
 
+	/*ABOUT US*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+.container {
+  padding: 0 16px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
