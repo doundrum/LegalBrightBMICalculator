@@ -55,6 +55,19 @@
    color: white;
    text-align: center;
 }
+	
+inform{
+  font-size:50px;
+  color:black;
+  animation-name:moreinformation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moreinformation {
+  from {color: black;}
+  to {color: red;}
+}		
 </style>
 </head>
 
@@ -85,7 +98,13 @@
 			<span id = "healthRisk"></span></p>
 		</form>
 	</div>
-	
+	<div class="inform">
+            <h3><b>CLICK ME FOR MORE INFORMATION!!</h3>
+            </div>
+            <a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html%22%3E">
+             <img src="Information.PNG" alt="Moreinformation" >
+           </div>
+							     
 	<script>
 	function myFunction() 
 	{
