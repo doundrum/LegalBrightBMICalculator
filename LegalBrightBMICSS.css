@@ -74,4 +74,16 @@
   padding: 50px;
   margin: 20px;
 }
+inform{
+  font-size:50px;
+  color:black;
+  animation-name:moreinformation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moreinformation {
+  from {color: black;}
+  to {color: red;}
+}
 
